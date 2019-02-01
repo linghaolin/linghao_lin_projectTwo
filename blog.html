@@ -8,11 +8,12 @@
     <title>Bar One Blog</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="bodyWrapper">
-        <header>
+    <div class="bodyWrapper blogBody">
+        <header class="blogHeader">
             <div class="wrapper">
                 <nav class="headerNav">
                     <ul>
@@ -29,39 +30,54 @@
         </header>
 
         <main class="blog">
-            <div class="blogImage">
-                <img src="assets/post-image.jpg" alt="spinach salad and salmon bread">
-            </div>
-            <article class="blogArticle">
-                <h2>New menu!</h2>
-                <p>Monday January 30, 2019 by Saron</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum rerum, porro tempore unde exercitationem, culpa modi labore praesentium earum deleniti aspernatur suscipit, esse excepturi sit cupiditate consequuntur similique est.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est a reiciendis itaque nesciunt ea mollitia, doloremque consequuntur? Similique voluptate nobis odio. Vero quasi nulla aliquid tenetur suscipit, sit at id!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odio quae recusandae assumenda dignissimos facere debitis libero delectus architecto officia. Soluta nulla molestiae repudiandae facere, dolore voluptatum rerum. Et, recusandae.</p>
-            </article>
+            <section class="blogContent">
+                <div class="blogImage">
+                    <img src="assets/post-image.jpg" alt="spinach salad and salmon bread">
+                </div>
+                <article class="blogArticle">
+                    <h2>New menu!</h2>
+                    <p>Monday January 30, 2019 by Saron</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum rerum, porro tempore unde exercitationem, culpa modi labore praesentium earum deleniti aspernatur suscipit, esse excepturi sit cupiditate consequuntur similique est.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est a reiciendis itaque nesciunt ea mollitia, doloremque consequuntur? Similique voluptate nobis odio. Vero quasi nulla aliquid tenetur suscipit, sit at id!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut odio quae recusandae assumenda dignissimos facere debitis libero delectus architecto officia. Soluta nulla molestiae repudiandae facere, dolore voluptatum rerum. Et, recusandae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, voluptatibus natus labore numquam ipsam, ab maxime veniam a quidem, eveniet quos voluptatem obcaecati impedit ut asperiores sequi atque inventore facere. Et, eum? Accusantium,
+                        iste illum. Officiis excepturi sapiente at labore ab corrupti magnam itaque error numquam temporibus, quisquam consequatur vitae dolor sequi sed natus soluta eum esse quasi repudiandae aperiam. Non cum quasi alias quo, nostrum
+                        optio ad? Tempore amet officia corporis aspernatur nihil ab, explicabo, quisquam ipsam modi et dolore, nesciunt neque natus perferendis iste voluptates accusantium itaque minima. Obcaecati mollitia iusto, tempore nam cumque facilis
+                        iure amet reiciendis quia ut expedita blanditiis in dignissimos? Voluptas distinctio nihil ratione exercitationem? Repellendus quasi deleniti, doloribus tempora facilis tempore odio non. Esse itaque nesciunt totam architecto sit
+                        dignissimos repellat impedit quo. Quam provident perspiciatis expedita a laborum obcaecati, nam asperiores distinctio libero necessitatibus numquam odit et ullam nesciunt. Ab, distinctio consequatur?</p>
+                </article>
+            </section>
+
+
+            <aside class="post">
+                <div class="wrapper">
+                    <div class="postImage">
+                        <img src="assets/sidebar-image.jpg" alt="taking beer from beer pump">
+                    </div>
+
+                    <section class="postContent">
+                        <div class="mainPost">
+                            <h3>Our mission</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, vitae expedita. Quisquam rerum doloribus explicabo sunt facilis ea expedita!</p>
+                            <a href="">Find out more.</a>
+                        </div>
+
+                        <div class="recentPost">
+                            <h3>Recent posts</h3>
+                            <ul>
+                                <li>lorem ipsum dolor sit</li>
+                                <li>lorem ipsum dolor sit</li>
+                                <li>lorem ipsum dolor sit</li>
+                                <li>lorem ipsum dolor sit</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+            </aside>
         </main>
 
-        <aside class="post">
-            <div class="wrapper">
-                <img src="assets/sidebar-image.jpg" alt="taking beer from beer pump">
-                <div class="mainPost">
-                    <h3>Our mission</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, vitae expedita. Quisquam rerum doloribus explicabo sunt facilis ea expedita!</p>
-                    <a href="">Find out more.</a>
-                </div>
-
-                <div class="recentPost">
-                    <ul>
-                        <li>lorem ipsum dolor sit</li>
-                        <li>lorem ipsum dolor sit</li>
-                        <li>lorem ipsum dolor sit</li>
-                        <li>lorem ipsum dolor sit</li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-
-        <section class="commet">
+        <section class="comment">
             <div class="wrapper">
                 <h2>Comments:</h2>
                 <div class="commentBox">

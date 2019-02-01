@@ -1,0 +1,65 @@
+// header style
+.contactHeader {
+    background-image: url('../assets/contact-header-1.jpg');
+    background-size: cover;
+    height: 80vh;
+    h1 {
+        color: $textColor;
+        font-size: 8.32rem;
+        font-family: $basefont;
+        padding-top: 15%;
+    }
+}
+
+// main style
+.contactBox {
+    background-color: $primary;
+    padding-bottom: 0;
+    .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+form {
+    background-color: $secondary;
+    width: 90%;
+    padding: 4%;
+    font-size: 4rem;
+    position: relative;
+    bottom: 300px;
+    @include boxShadow;
+    input,
+    textarea {
+        background-color: $secondary;
+        color: $textColor;
+        font-weight: bold;
+    }
+    .formSingleLine {
+        display: flex;
+    }
+    input.formName,
+    input.formEmail {
+        width: 50%;
+        border: none;
+        border-bottom: 2px solid $textColor;
+    }
+    input.formName {
+        margin-right: 4%;
+    }
+    textarea {
+        height: 30%;
+        width: 100%;
+        margin: 10% 0 10% 0;
+        border: 2px solid $textColor;
+        padding: 5%;
+    }
+    input[type="submit"] {
+        display: block;
+        background-color: $titleColor;
+        width: 100%;
+        border: none;
+    }
+}

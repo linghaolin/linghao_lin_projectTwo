@@ -8,12 +8,13 @@
     <title>Linghao's Project2</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="bodyWrapper">
 
-        <header>
+        <header class="homeHeader">
             <div class="wrapper">
                 <nav class="headerNav">
                     <ul>
@@ -26,8 +27,9 @@
                 </nav>
 
                 <main>
-                    <h1>Bar-One</h1>
-                    <p>Place to be is</p>
+                    <div class="mainTitle">
+                        <h1>Bar-One<span>Place to be is</span></h1>
+                    </div>
                 </main>
 
                 <div class="headerBox">
@@ -42,38 +44,45 @@
                     <div class="aboutLogo">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3>New space</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nihil magnam quos voluptates animi deleniti saepe mollitia ipsam adipisci modi eum dignissimos, quae optio, natus officia obcaecati eveniet ex ullam!</p>
+                    <div class="aboutArticle">
+                        <h3>New space</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nihil magnam quos voluptates animi deleniti saepe mollitia ipsam </p>
+                    </div>
                 </div>
 
                 <div class="aboutInfo">
                     <div class="aboutLogo">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Community</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi eveniet nesciunt? Quam exercitationem laboriosam consequuntur sed dolorum animi nemo
+                    <div class="aboutArticle">
+                        <h3>Community</h3>
                         commodi.
-                    </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi
+                        </p>
+                    </div>
                 </div>
 
                 <div class="aboutInfo">
                     <div class="aboutLogo">
                         <i class="fas fa-file"></i>
                     </div>
-                    <h3>Blog</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi eveniet nesciunt? Quam exercitationem laboriosam consequuntur sed dolorum animi nemo
+                    <div class="aboutArticle">
+                        <h3>Blog</h3>
                         commodi.
-                    </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi </p>
+                    </div>
                 </div>
 
                 <div class="aboutInfo">
                     <div class="aboutLogo">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Get in touch</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi eveniet nesciunt? Quam exercitationem laboriosam consequuntur sed dolorum animi nemo
+                    <div class="aboutArticle">
+                        <h3>Get in touch</h3>
                         commodi.
-                    </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus sequi voluptates, in quis obcaecati accusantium dolorum vel magnam quasi
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,26 +90,26 @@
         <section class="news">
             <div class="wrapper">
 
-                <div class="newsBox">
+                <div class="newsBox newsBox1">
                     <div class="newsImage">
                         <img src="assets/left-image.jpg" alt="bar table under a pile of bulbs">
                     </div>
                     <div class="newsArticle">
-                        <h3>New locations</h3>
+                        <h3>Plan ahead</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sed nihil autem inventore nam magni, atque delectus ut, quam sint est quia? Quidem modi soluta explicabo suscipit, autem nemo harum.</p>
+                        <a href="" class="button newsButton">read more</a>
                     </div>
-                    <a href="" class="button newsButton">read more</a>
                 </div>
 
-                <div class="newsBox">
+                <div class="newsBox newsBox2">
                     <div class="newsImage">
                         <img src="assets/right-image.jpg" alt="long bar table with some stools along it">
                     </div>
                     <div class="newsArticle">
-                        <h3>Plan ahead</h3>
+                        <h3>New locations</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sed nihil autem inventore nam magni,atque delectus ut, quam sint est quia? Quidem modi soluta explicabo suscipit, autem nemo harum.</p>
+                        <a href="" class="button newsButton">read more</a>
                     </div>
-                    <a href="" class="button newsButton">read more</a>
                 </div>
 
             </div>
@@ -134,9 +143,9 @@
 
         <section class="gallery">
             <div class="wrapper">
-                <img src="assets/gallery-image-1.jpg" alt="wine shelf">
-                <img src="assets/gallery-image-2.jpg" alt="hamburger and fries">
-                <img src="assets/gallery-image-3.jpg" alt="smoothie with cherry tomato on it">
+                <div class="galleryImage galleryImage1"></div>
+                <div class="galleryImage galleryImage2"></div>
+                <div class="galleryImage galleryImage3"></div>
             </div>
         </section>
 

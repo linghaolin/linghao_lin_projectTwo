@@ -1,0 +1,28 @@
+header .wrapper {
+    padding-top: 0;
+}
+
+.headerNav {
+    font-family: $basefont;
+    width: 70%;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.headerNav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0;
+    a {
+        font-size: 3.8rem;
+        font-weight: bold;
+    }
+    .navLogo a {
+        font-size: 6rem;
+        font-family: $headerfont;
+    }
+    li a:hover {
+        color: $titleColor;
+    }
+}

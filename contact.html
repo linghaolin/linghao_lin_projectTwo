@@ -8,11 +8,12 @@
     <title>Bar One Contact</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Chathura:400,700|Tulpen+One" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="bodyWrapper">
-        <header>
+        <header class="contactHeader">
             <div class="wrapper">
                 <nav class="headerNav">
                     <ul>
@@ -24,38 +25,44 @@
                     </ul>
                 </nav>
 
-                <h1>Get in touch</h1>
+                <h1>Get in Touch</h1>
             </div>
         </header>
 
-        <form action="">
-            <label for="name">Name</label>
-            <input type="text" id="userName">
-
-            <label for="email">Email address</label>
-            <input type="text" id="userName">
-
-            <label for="message">Message</label>
-            <textarea name="message" id="userMessage" cols="30" rows="10" placeholder="Message"></textarea>
-
-            <input type="submit" value="Submit">
-        </form>
-
-        <aside>
+        <main class="contactBox">
             <div class="wrapper">
-                <ul class="social">
-                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
-                </ul>
-                <div class="contactInfo">
-                    <p>info@email.com</p>
-                    <p>123-456-7890</p>
-                    <p>Queen st. Unit10 Toronto,Ontario M5V205</p>
-                </div>
+                <form action="">
+                    <div class="formSingleLine">
+                        <label for="name" class="visuallyhidden">Name</label>
+                        <input type="text" id="userName" class="formName" placeholder="Name">
+
+                        <label for="email" class="visuallyhidden">Email address</label>
+                        <input type="text" id="userEmail" class="formEmail" placeholder="Email address">
+                    </div>
+
+                    <label for="message" class="visuallyhidden">Message</label>
+                    <textarea name="message" id="userMessage" cols="30" rows="5" placeholder="Message"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+
+                <aside>
+                    <div class="wrapper">
+                        <ul class="social">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                        </ul>
+                        <div class="contactInfo">
+                            <p>info@email.com</p>
+                            <p>123-456-7890</p>
+                            <p>Queen st. Unit10 Toronto,Ontario M5V205</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
-        </aside>
+        </main>
 
         <footer>
             <div class="wrapper">

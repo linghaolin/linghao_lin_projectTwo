@@ -1,0 +1,101 @@
+.blogBody {
+    background-color: $primary;
+}
+
+// header style
+.blogHeader {
+    background-image: url('../assets/blog-header-1.jpg');
+    background-size: cover;
+    height: 80vh;
+    h1 {
+        color: $textColor;
+        font-size: 8.32rem;
+        font-family: $basefont;
+        padding-top: 15%;
+    }
+}
+
+// main style
+main.blog {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    .blogContent {
+        flex-basis: 68%;
+        margin-left: 4%;
+        position: relative;
+        top: -200px;
+        .blogImage {
+            background-color: $titleColor;
+            img {
+                padding: 0 0 1% 2%;
+                position: relative;
+                top: -20px;
+            }
+        }
+        .blogArticle {
+            padding: 2% 5%;
+            border-left: 5px solid $titleColor;
+            border-bottom: 5px solid $titleColor;
+            h2+p {
+                color: $titleColor;
+                margin-top: 0;
+            }
+        }
+    }
+    aside {
+        flex-basis: 28%;
+        background-color: $primary;
+        padding: 0;
+        margin: 0;
+        .postContent {
+            margin-left: 10%;
+            padding: 50% 5% 5% 5%;
+            background-color: $secondary;
+            .mainPost a {
+                color: $titleColor;
+                font-size: 4rem;
+                font-family: $basefont;
+                display: block;
+                line-height: 35px;
+            }
+            h3+p {
+                margin: 0;
+            }
+        }
+        ul li {
+            font-size: 3.9rem;
+            padding-left: 10%;
+            line-height: 25px;
+            position: relative;
+            &::before {
+                content: '·';
+                color: $titleColor;
+                font-size: 6rem;
+                position: absolute;
+                top: 10px;
+                left: 0;
+            }
+        }
+    }
+    .postImage img {
+        position: relative;
+        left: -20px;
+        top: 180px;
+    }
+}
+
+// comment section style
+.comment {
+    padding-left: 30%;
+    .commentBox {
+        display: flex;
+        align-items: center;
+        .commentImage {
+            flex-basis: 20%;
+        }
+        .commentArticle {
+            flex-basis: 80%;
+        }
+    }
+}
