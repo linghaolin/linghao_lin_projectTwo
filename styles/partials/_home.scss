@@ -1,8 +1,6 @@
 // header style
 .homeHeader {
     background-image: url('../assets/home-image-1.jpg');
-    // background-size: contain;
-    // background-image: url('../assets/header-box.jpg');
     height: 100vh;
     background-color: $primary;
 }
@@ -54,10 +52,12 @@
 // about section style
 .about {
     background-color: $primary;
+    height: 100vh;
     .wrapper {
         display: flex;
         flex-wrap: wrap;
         padding-top: 10%;
+        align-items: center;
     }
     .aboutInfo {
         position: relative;
@@ -66,7 +66,7 @@
         align-items: flex-start;
     }
     .aboutLogo {
-        background-color: $titleColor;
+        background-color: $third;
         border-radius: 50%;
         padding: 3%;
         i {
@@ -88,39 +88,43 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        padding-top: 3%;
     }
     .newsBox {
         display: flex;
         .newsImage {
             position: absolute;
-            flex-basis: 50%;
+            width: 45%;
+        }
+        .newsArticle {
+            width: 50%;
         }
     }
 }
 
 .newsBox1 {
     text-align: right;
-    padding-right: 5%;
     .newsImage {
-        top: -4%;
+        top: -10%;
         left: 0;
         @include boxShadow;
     }
     .newsArticle {
-        padding-left: 60%;
+        margin-left: 55%;
         text-align: left;
     }
 }
 
 .newsBox2 {
     flex-direction: row-reverse;
+    padding-top: 10%;
     .newsImage {
-        bottom: -4%;
+        bottom: -10%;
         right: 0;
         @include boxShadow(-20px);
     }
     .newsArticle {
-        padding-right: 60%;
+        margin-right: 55%;
         text-align: right;
     }
 }
@@ -129,12 +133,13 @@
 .inquiry {
     background-color: $primary;
     text-align: center;
-    height: 80vh;
+    height: 100vh;
     .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
     }
     h2 {
         color: $titleColor;
@@ -154,6 +159,7 @@
     background-color: $primary;
     .wrapper {
         display: flex;
+        padding: 10% 5%;
         .eventImage {
             width: 30%;
             padding-right: 5%;
@@ -173,11 +179,14 @@
         display: flex;
         .galleryImage {
             margin-right: 2%;
-            object-fit: cover;
             height: 400px;
             width: 500px;
+            object-fit: cover;
             &:last-child {
                 margin-right: 0;
+            }
+            img {
+                object-fit: cover;
             }
         }
     }
@@ -189,5 +198,192 @@
     }
     .galleryImage3 {
         background-image: url('../assets/gallery-image-3.jpg');
+    }
+}
+
+// responsive style
+@media only screen and (max-width: 1126px) {
+    .news .wrapper {
+        padding-top: 0;
+    }
+    .news .newsBox .newsImage {
+        width: 50%;
+    }
+    .newsBox1 .newsImage {
+        top: -4%;
+    }
+    .news .newsBox2 {
+        padding-top: 5%;
+        .newsImage {
+            bottom: -4%;
+        }
+    }
+}
+
+@media only screen and (max-width: 997px) {
+    .wrapper {
+        padding: 2%;
+    }
+    .homeHeader .headerBox {
+        top: 60%;
+        width: 60%;
+    }
+    .inquiry {
+        height: 80vh;
+    }
+    .newsBox1 .newsImage {
+        top: -2%;
+    }
+    .news .newsBox2 .newsImage {
+        bottom: -2%;
+    }
+}
+
+@media only screen and (max-width: 897px) {
+    .news .newsBox {
+        .newsImage {
+            position: static;
+            width: 45%;
+        }
+        .newsArticle {
+            width: 50%;
+        }
+    }
+    .news .newsBox1 .newsArticle {
+        margin-left: 5%;
+    }
+    .news .newsBox2 .newsArticle {
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .wrapper {
+        padding: 5%;
+    }
+    .homeHeader .headerBox {
+        display: none;
+    }
+    .homeHeader main {
+        margin: 30% auto;
+        height: auto;
+        .mainTitle {
+            position: static;
+        }
+    }
+    .news {
+        .wrapper {
+            display: block;
+        }
+        .newsBox {
+            display: block;
+            .newsImage {
+                width: 100%;
+                box-shadow: none;
+            }
+            .newsArticle {
+                width: 100%;
+                text-align: center;
+                padding: 5%;
+                margin: 0;
+            }
+        }
+    }
+    .inquiry {
+        height: 60vh;
+    }
+    .banner {
+        height: 40vh;
+    }
+    .event .wrapper {
+        align-items: center;
+        .eventImage {
+            width: 40%;
+            box-shadow: none;
+        }
+        .eventArticle {
+            width: 50%;
+        }
+    }
+    .gallery .galleryImage:last-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .about {
+        height: auto;
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            padding-top: 5%;
+        }
+        .aboutInfo {
+            position: static;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2%;
+            width: 50%;
+        }
+        .aboutLogo i {
+            font-size: 3rem;
+        }
+        .aboutArticle {
+            h3 {
+                font-size: 5rem;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+    .event {
+        .wrapper {
+            display: block;
+            padding: 5%;
+            .eventImage {
+                width: 50%;
+                padding-right: 0;
+                margin: auto;
+            }
+            .eventArticle {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .homeHeader {
+        height: 70vh;
+    }
+    .homeHeader main {
+        position: static;
+        h1 {
+            font-size: 15rem;
+            span {
+                font-size: 6.32rem;
+                top: 115%;
+            }
+        }
+    }
+    .about .wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .aboutInfo {
+            margin: 0;
+            width: 100%;
+        }
+        .aboutArticle {
+            padding: 0;
+        }
+    }
+    .inquiry {
+        height: auto;
     }
 }

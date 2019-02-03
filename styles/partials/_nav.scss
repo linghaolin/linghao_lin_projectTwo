@@ -13,10 +13,11 @@ header .wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2% 0;
+    padding: 5% 0;
     a {
         font-size: 3.8rem;
         font-weight: bold;
+        font-family: $basefont;
     }
     .navLogo a {
         font-size: 6rem;

@@ -9,7 +9,7 @@
     height: 80vh;
     h1 {
         color: $textColor;
-        font-size: 8.32rem;
+        font-size: 12rem;
         font-family: $basefont;
         padding-top: 15%;
     }
@@ -17,14 +17,13 @@
 
 // main style
 main.blog {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    position: relative;
     .blogContent {
-        flex-basis: 68%;
         margin-left: 4%;
-        position: relative;
+        position: absolute;
         top: -200px;
+        right: 0;
+        width: 68%;
         .blogImage {
             background-color: $titleColor;
             img {
@@ -44,7 +43,7 @@ main.blog {
         }
     }
     aside {
-        flex-basis: 28%;
+        width: 28%;
         background-color: $primary;
         padding: 0;
         margin: 0;
@@ -70,7 +69,7 @@ main.blog {
             position: relative;
             &::before {
                 content: '·';
-                color: $titleColor;
+                color: $third;
                 font-size: 6rem;
                 position: absolute;
                 top: 10px;
@@ -81,21 +80,215 @@ main.blog {
     .postImage img {
         position: relative;
         left: -20px;
-        top: 180px;
+        top: 150px;
     }
 }
 
 // comment section style
 .comment {
     padding-left: 30%;
+    margin-top: 20%;
     .commentBox {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        margin-bottom: 6%;
+        margin-top: 6%;
         .commentImage {
             flex-basis: 20%;
         }
         .commentArticle {
             flex-basis: 80%;
+            padding-left: 2%;
+            .title {
+                color: $titleColor;
+                margin: 0;
+            }
         }
+    }
+}
+
+// form section style
+.blogFormWrapper form {
+    background-color: $primary;
+    padding: 0 5% 5% 34%;
+    .formSingleLine {
+        display: flex;
+    }
+    input.formName,
+    input.formEmail {
+        width: 48%;
+        border: none;
+        border-bottom: 2px solid $titleColor;
+        background-color: $primary;
+        font-size: 5rem;
+    }
+    input.formName {
+        margin-right: 4%;
+    }
+    textarea {
+        width: 100%;
+        margin: 10% 0 10% 0;
+        border: 2px solid $titleColor;
+        padding: 5%;
+        background-color: $primary;
+        font-size: 5rem;
+    }
+    input[type="submit"] {
+        display: block;
+        background-color: $third;
+        width: 100%;
+        border: none;
+        font-size: 4rem;
+        font-family: $headerfont;
+    }
+}
+
+// responsive style
+@media only screen and (max-width: 1090px) {
+    .comment {
+        margin-top: 25%;
+    }
+    main.blog .postImage img {
+        top: 100px;
+    }
+    .recentPost {
+        h3 {
+            font-size: 6rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .blogHeader {
+        height: 60vh;
+        h1 {
+            padding-left: 10%;
+        }
+    }
+    main.blog {
+        position: static;
+        display: flex;
+        flex-direction: row-reverse;
+        border: 5px solid $titleColor;
+        h3 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 3.5rem;
+        }
+        .blogContent {
+            margin-left: 4%;
+            position: static;
+            width: 68%;
+            .blogImage img {
+                padding: 0;
+                position: static;
+            }
+            .blogArticle {
+                padding: 0;
+                border: none;
+            }
+        }
+        aside {
+            padding-top: 10%;
+            width: 30%;
+            .wrapper {
+                padding: 0;
+            }
+            .postContent {
+                margin-left: 0;
+                padding: 5%;
+            }
+            ul li {
+                font-size: 2.9rem;
+                padding-left: 5%;
+            }
+            .postImage img {
+                position: static;
+            }
+        }
+    }
+    .comment {
+        padding-left: 0;
+        margin-top: 5%;
+        .wrapper {
+            padding: 0 5%;
+        }
+    }
+    .blogFormWrapper form {
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .blogBody {
+        background-image: url('../assets/blog-header-1.jpg');
+    }
+    .blogHeader {
+        height: 50vh;
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+        }
+    }
+    main.blog {
+        display: block;
+        border: none;
+        .blogContent {
+            margin: 5%;
+            width: 90%;
+            border: 5px solid $titleColor;
+            .blogImage img {
+                padding: 0;
+                position: static;
+            }
+            .blogArticle {
+                padding: 5%;
+                border: none;
+            }
+        }
+        aside {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            border: 5px solid $titleColor;
+            padding-top: 0;
+            background-color: transparent;
+            .wrapper {
+                padding: 0;
+            }
+            .postContent {
+                margin-left: 0;
+                padding: 5% 10%;
+                background-color: transparent;
+                ul li {
+                    padding-left: 5%;
+                }
+            }
+            .postImage {
+                padding: 0;
+                height: 50vh;
+                background-image: url('../assets/sidebar-image.jpg');
+                background-size: cover;
+                background-position: center;
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+    .blogFormWrapper form {
+        background-color: transparent;
+        input.formName,
+        input.formEmail,
+        textarea {
+            background-color: transparent;
+        }
+    }
+    .comment p {
+        font-size: 3.5rem;
     }
 }

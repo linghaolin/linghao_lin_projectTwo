@@ -225,7 +225,7 @@ h3 {
   font-weight: bold; }
 
 .button {
-  background: #ff8327;
+  background: #bf2603;
   padding: 1% 3%;
   color: #ffffff;
   font-size: 3.9rem; }
@@ -248,10 +248,11 @@ header .wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 2% 0; }
+  padding: 5% 0; }
   .headerNav ul a {
     font-size: 3.8rem;
-    font-weight: bold; }
+    font-weight: bold;
+    font-family: "Chathura", sans-serif; }
   .headerNav ul .navLogo a {
     font-size: 6rem;
     font-family: "Tulpen One", cursive; }
@@ -325,14 +326,18 @@ footer {
   right: 0; }
 
 .about {
-  background-color: #111010; }
+  background-color: #111010;
+  height: 100vh; }
   .about .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-top: 10%; }
+    padding-top: 10%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .about .aboutInfo {
     position: relative;
     -ms-flex-preferred-size: 50%;
@@ -344,7 +349,7 @@ footer {
     -ms-flex-align: start;
     align-items: flex-start; }
   .about .aboutLogo {
-    background-color: #ff8327;
+    background-color: #bf2603;
     border-radius: 50%;
     padding: 3%; }
     .about .aboutLogo i {
@@ -355,7 +360,7 @@ footer {
       margin: 0; }
 
 .news {
-  background-color: #bf2603; }
+  background-color: #220303; }
   .news .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -364,46 +369,48 @@ footer {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    position: relative; }
+    position: relative;
+    padding-top: 3%; }
   .news .newsBox {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     .news .newsBox .newsImage {
       position: absolute;
-      -ms-flex-preferred-size: 50%;
-      flex-basis: 50%; }
+      width: 45%; }
+    .news .newsBox .newsArticle {
+      width: 50%; }
 
 .newsBox1 {
-  text-align: right;
-  padding-right: 5%; }
+  text-align: right; }
   .newsBox1 .newsImage {
-    top: -4%;
+    top: -10%;
     left: 0;
     -webkit-box-shadow: 20px 20px #ff8327;
     box-shadow: 20px 20px #ff8327; }
   .newsBox1 .newsArticle {
-    padding-left: 60%;
+    margin-left: 55%;
     text-align: left; }
 
 .newsBox2 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse; }
+  flex-direction: row-reverse;
+  padding-top: 10%; }
   .newsBox2 .newsImage {
-    bottom: -4%;
+    bottom: -10%;
     right: 0;
     -webkit-box-shadow: -20px 20px #ff8327;
     box-shadow: -20px 20px #ff8327; }
   .newsBox2 .newsArticle {
-    padding-right: 60%;
+    margin-right: 55%;
     text-align: right; }
 
 .inquiry {
   background-color: #111010;
   text-align: center;
-  height: 80vh; }
+  height: 100vh; }
   .inquiry .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -417,7 +424,8 @@ footer {
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
   .inquiry h2 {
     color: #ff8327; }
 
@@ -432,7 +440,8 @@ footer {
   .event .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    padding: 10% 5%; }
     .event .wrapper .eventImage {
       width: 30%;
       padding-right: 5%;
@@ -443,25 +452,174 @@ footer {
       padding-left: 5%; }
 
 .gallery {
-  background-color: #bf2603; }
+  background-color: #220303; }
   .gallery .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     .gallery .wrapper .galleryImage {
       margin-right: 2%;
-      -o-object-fit: cover;
-      object-fit: cover;
       height: 400px;
-      width: 500px; }
+      width: 500px;
+      -o-object-fit: cover;
+      object-fit: cover; }
       .gallery .wrapper .galleryImage:last-child {
         margin-right: 0; }
+      .gallery .wrapper .galleryImage img {
+        -o-object-fit: cover;
+        object-fit: cover; }
   .gallery .galleryImage1 {
     background-image: url("../assets/gallery-image-1.jpg"); }
   .gallery .galleryImage2 {
     background-image: url("../assets/gallery-image-2.jpg"); }
   .gallery .galleryImage3 {
     background-image: url("../assets/gallery-image-3.jpg"); }
+
+@media only screen and (max-width: 1126px) {
+  .news .wrapper {
+    padding-top: 0; }
+  .news .newsBox .newsImage {
+    width: 50%; }
+  .newsBox1 .newsImage {
+    top: -4%; }
+  .news .newsBox2 {
+    padding-top: 5%; }
+    .news .newsBox2 .newsImage {
+      bottom: -4%; } }
+
+@media only screen and (max-width: 997px) {
+  .wrapper {
+    padding: 2%; }
+  .homeHeader .headerBox {
+    top: 60%;
+    width: 60%; }
+  .inquiry {
+    height: 80vh; }
+  .newsBox1 .newsImage {
+    top: -2%; }
+  .news .newsBox2 .newsImage {
+    bottom: -2%; } }
+
+@media only screen and (max-width: 897px) {
+  .news .newsBox .newsImage {
+    position: static;
+    width: 45%; }
+  .news .newsBox .newsArticle {
+    width: 50%; }
+  .news .newsBox1 .newsArticle {
+    margin-left: 5%; }
+  .news .newsBox2 .newsArticle {
+    margin-right: 5%; } }
+
+@media only screen and (max-width: 760px) {
+  .wrapper {
+    padding: 5%; }
+  .homeHeader .headerBox {
+    display: none; }
+  .homeHeader main {
+    margin: 30% auto;
+    height: auto; }
+    .homeHeader main .mainTitle {
+      position: static; }
+  .news .wrapper {
+    display: block; }
+  .news .newsBox {
+    display: block; }
+    .news .newsBox .newsImage {
+      width: 100%;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .news .newsBox .newsArticle {
+      width: 100%;
+      text-align: center;
+      padding: 5%;
+      margin: 0; }
+  .inquiry {
+    height: 60vh; }
+  .banner {
+    height: 40vh; }
+  .event .wrapper {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .event .wrapper .eventImage {
+      width: 40%;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .event .wrapper .eventArticle {
+      width: 50%; }
+  .gallery .galleryImage:last-child {
+    display: none; } }
+
+@media only screen and (max-width: 680px) {
+  .about {
+    height: auto; }
+    .about .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      text-align: center;
+      padding-top: 5%; }
+    .about .aboutInfo {
+      position: static;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 2%;
+      width: 50%; }
+    .about .aboutLogo i {
+      font-size: 3rem; }
+    .about .aboutArticle h3 {
+      font-size: 5rem; }
+    .about .aboutArticle p {
+      display: none; }
+  .event .wrapper {
+    display: block;
+    padding: 5%; }
+    .event .wrapper .eventImage {
+      width: 50%;
+      padding-right: 0;
+      margin: auto; }
+    .event .wrapper .eventArticle {
+      width: 100%;
+      padding-left: 0;
+      text-align: center; } }
+
+@media only screen and (max-width: 500px) {
+  .homeHeader {
+    height: 70vh; }
+  .homeHeader main {
+    position: static; }
+    .homeHeader main h1 {
+      font-size: 15rem; }
+      .homeHeader main h1 span {
+        font-size: 6.32rem;
+        top: 115%; }
+  .about .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+    .about .wrapper .aboutInfo {
+      margin: 0;
+      width: 100%; }
+    .about .wrapper .aboutArticle {
+      padding: 0; }
+  .inquiry {
+    height: auto; } }
 
 .blogBody {
   background-color: #111010; }
@@ -472,26 +630,18 @@ footer {
   height: 80vh; }
   .blogHeader h1 {
     color: #ffffff;
-    font-size: 8.32rem;
+    font-size: 12rem;
     font-family: "Chathura", sans-serif;
     padding-top: 15%; }
 
 main.blog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  position: relative; }
   main.blog .blogContent {
-    -ms-flex-preferred-size: 68%;
-    flex-basis: 68%;
     margin-left: 4%;
-    position: relative;
-    top: -200px; }
+    position: absolute;
+    top: -200px;
+    right: 0;
+    width: 68%; }
     main.blog .blogContent .blogImage {
       background-color: #ff8327; }
       main.blog .blogContent .blogImage img {
@@ -506,15 +656,14 @@ main.blog {
         color: #ff8327;
         margin-top: 0; }
   main.blog aside {
-    -ms-flex-preferred-size: 28%;
-    flex-basis: 28%;
+    width: 28%;
     background-color: #111010;
     padding: 0;
     margin: 0; }
     main.blog aside .postContent {
       margin-left: 10%;
       padding: 50% 5% 5% 5%;
-      background-color: #bf2603; }
+      background-color: #220303; }
       main.blog aside .postContent .mainPost a {
         color: #ff8327;
         font-size: 4rem;
@@ -530,7 +679,7 @@ main.blog {
       position: relative; }
       main.blog aside ul li::before {
         content: '·';
-        color: #ff8327;
+        color: #bf2603;
         font-size: 6rem;
         position: absolute;
         top: 10px;
@@ -538,23 +687,186 @@ main.blog {
   main.blog .postImage img {
     position: relative;
     left: -20px;
-    top: 180px; }
+    top: 150px; }
 
 .comment {
-  padding-left: 30%; }
+  padding-left: 30%;
+  margin-top: 20%; }
   .comment .commentBox {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 6%;
+    margin-top: 6%; }
     .comment .commentBox .commentImage {
       -ms-flex-preferred-size: 20%;
       flex-basis: 20%; }
     .comment .commentBox .commentArticle {
       -ms-flex-preferred-size: 80%;
-      flex-basis: 80%; }
+      flex-basis: 80%;
+      padding-left: 2%; }
+      .comment .commentBox .commentArticle .title {
+        color: #ff8327;
+        margin: 0; }
+
+.blogFormWrapper form {
+  background-color: #111010;
+  padding: 0 5% 5% 34%; }
+  .blogFormWrapper form .formSingleLine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .blogFormWrapper form input.formName,
+  .blogFormWrapper form input.formEmail {
+    width: 48%;
+    border: none;
+    border-bottom: 2px solid #ff8327;
+    background-color: #111010;
+    font-size: 5rem; }
+  .blogFormWrapper form input.formName {
+    margin-right: 4%; }
+  .blogFormWrapper form textarea {
+    width: 100%;
+    margin: 10% 0 10% 0;
+    border: 2px solid #ff8327;
+    padding: 5%;
+    background-color: #111010;
+    font-size: 5rem; }
+  .blogFormWrapper form input[type="submit"] {
+    display: block;
+    background-color: #bf2603;
+    width: 100%;
+    border: none;
+    font-size: 4rem;
+    font-family: "Tulpen One", cursive; }
+
+@media only screen and (max-width: 1090px) {
+  .comment {
+    margin-top: 25%; }
+  main.blog .postImage img {
+    top: 100px; }
+  .recentPost h3 {
+    font-size: 6rem; } }
+
+@media only screen and (max-width: 999px) {
+  .blogHeader {
+    height: 60vh; }
+    .blogHeader h1 {
+      padding-left: 10%; }
+  main.blog {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    border: 5px solid #ff8327; }
+    main.blog h3 {
+      font-size: 5rem; }
+    main.blog p {
+      font-size: 3.5rem; }
+    main.blog .blogContent {
+      margin-left: 4%;
+      position: static;
+      width: 68%; }
+      main.blog .blogContent .blogImage img {
+        padding: 0;
+        position: static; }
+      main.blog .blogContent .blogArticle {
+        padding: 0;
+        border: none; }
+    main.blog aside {
+      padding-top: 10%;
+      width: 30%; }
+      main.blog aside .wrapper {
+        padding: 0; }
+      main.blog aside .postContent {
+        margin-left: 0;
+        padding: 5%; }
+      main.blog aside ul li {
+        font-size: 2.9rem;
+        padding-left: 5%; }
+      main.blog aside .postImage img {
+        position: static; }
+  .comment {
+    padding-left: 0;
+    margin-top: 5%; }
+    .comment .wrapper {
+      padding: 0 5%; }
+  .blogFormWrapper form {
+    padding: 5%; } }
+
+@media only screen and (max-width: 700px) {
+  .blogBody {
+    background-image: url("../assets/blog-header-1.jpg"); }
+  .blogHeader {
+    height: 50vh; }
+    .blogHeader h1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-left: 0; }
+  main.blog {
+    display: block;
+    border: none; }
+    main.blog .blogContent {
+      margin: 5%;
+      width: 90%;
+      border: 5px solid #ff8327; }
+      main.blog .blogContent .blogImage img {
+        padding: 0;
+        position: static; }
+      main.blog .blogContent .blogArticle {
+        padding: 5%;
+        border: none; }
+    main.blog aside {
+      width: 90%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      border: 5px solid #ff8327;
+      padding-top: 0;
+      background-color: transparent; }
+      main.blog aside .wrapper {
+        padding: 0; }
+      main.blog aside .postContent {
+        margin-left: 0;
+        padding: 5% 10%;
+        background-color: transparent; }
+        main.blog aside .postContent ul li {
+          padding-left: 5%; }
+      main.blog aside .postImage {
+        padding: 0;
+        height: 50vh;
+        background-image: url("../assets/sidebar-image.jpg");
+        background-size: cover;
+        background-position: center; }
+        main.blog aside .postImage img {
+          display: none; }
+  .blogFormWrapper form {
+    background-color: transparent; }
+    .blogFormWrapper form input.formName,
+    .blogFormWrapper form input.formEmail,
+    .blogFormWrapper form textarea {
+      background-color: transparent; }
+  .comment p {
+    font-size: 3.5rem; } }
 
 .contactHeader {
   background-image: url("../assets/contact-header-1.jpg");
@@ -570,55 +882,109 @@ main.blog {
   background-color: #111010;
   padding-bottom: 0; }
   .contactBox .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    height: 100vh;
+    position: relative; }
+    .contactBox .wrapper aside {
+      width: 30%; }
+      .contactBox .wrapper aside .social {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .contactBox .wrapper aside .social li {
+          padding-right: 5%; }
+        .contactBox .wrapper aside .social li:last-child {
+          padding-right: 0; }
+        .contactBox .wrapper aside .social i {
+          font-size: 3rem; }
 
-form {
-  background-color: #bf2603;
-  width: 90%;
+.contactInfo p.emailInfo {
+  margin-top: 0; }
+
+.contactInfo p:not(.emailInfo) {
+  margin: 0; }
+
+.contactBox form {
+  background-color: #220303;
+  width: 65%;
+  margin-right: 5%;
   padding: 4%;
   font-size: 4rem;
-  position: relative;
-  bottom: 300px;
+  position: absolute;
+  right: 0;
+  bottom: 150px;
   -webkit-box-shadow: 20px 20px #ff8327;
   box-shadow: 20px 20px #ff8327; }
-  form input,
-  form textarea {
-    background-color: #bf2603;
+  .contactBox form input,
+  .contactBox form textarea {
+    background-color: #220303;
     color: #ffffff;
     font-weight: bold; }
-  form .formSingleLine {
+  .contactBox form .formSingleLine {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  form input.formName,
-  form input.formEmail {
+  .contactBox form input.formName,
+  .contactBox form input.formEmail {
     width: 50%;
     border: none;
-    border-bottom: 2px solid #ffffff; }
-  form input.formName {
+    border-bottom: 2px solid #ffffff;
+    font-size: 4.5rem; }
+  .contactBox form input.formName {
     margin-right: 4%; }
-  form textarea {
+  .contactBox form textarea {
     height: 30%;
     width: 100%;
     margin: 10% 0 10% 0;
     border: 2px solid #ffffff;
     padding: 5%; }
-  form input[type="submit"] {
+  .contactBox form input[type="submit"] {
     display: block;
-    background-color: #ff8327;
+    background-color: #bf2603;
     width: 100%;
     border: none; }
+
+@media only screen and (max-width: 1090px) {
+  .contactHeader {
+    height: 70vh; } }
+
+@media only screen and (max-width: 995px) {
+  .contactHeader {
+    height: 60vh; } }
+
+@media only screen and (max-width: 750px) {
+  .contactWrapper {
+    background-image: url("../assets/contact-header-1.jpg"); }
+  .contactHeader {
+    height: 50vh; }
+    .contactHeader h1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .contactBox {
+    background-color: transparent; }
+    .contactBox .wrapper {
+      height: auto;
+      position: static; }
+      .contactBox .wrapper aside {
+        width: 100%;
+        text-align: center; }
+        .contactBox .wrapper aside ul {
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center; }
+  .contactBox form {
+    width: 100%;
+    margin: 0;
+    position: static;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    .contactBox form input.formEmail {
+      width: 46%; } }
 
 /*# sourceMappingURL=style.css.map */

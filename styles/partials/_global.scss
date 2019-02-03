@@ -1,6 +1,7 @@
 // variables
 $primary: #111010;
-$secondary: #bf2603;
+$secondary: #220303;
+$third: #bf2603;
 $titleColor:#ff8327;
 $textColor:#ffffff;
 $leastColor: #696969;
@@ -71,7 +72,7 @@ h3 {
 }
 
 .button {
-    background: $titleColor;
+    background: $third;
     padding: 1% 3%;
     color: $textColor;
     font-size: 3.9rem;

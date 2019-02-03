@@ -16,20 +16,43 @@
     background-color: $primary;
     padding-bottom: 0;
     .wrapper {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        justify-content: space-between;
+        height: 100vh;
+        position: relative;
+        aside {
+            width: 30%;
+            .social {
+                display: flex;
+                li {
+                    padding-right: 5%;
+                }
+                li:last-child {
+                    padding-right: 0;
+                }
+                i {
+                    font-size: 3rem;
+                }
+            }
+        }
     }
 }
 
-form {
+.contactInfo p.emailInfo {
+    margin-top: 0;
+}
+
+.contactInfo p:not(.emailInfo) {
+    margin: 0;
+}
+
+.contactBox form {
     background-color: $secondary;
-    width: 90%;
+    width: 65%;
+    margin-right: 5%;
     padding: 4%;
     font-size: 4rem;
-    position: relative;
-    bottom: 300px;
+    position: absolute;
+    right: 0;
+    bottom: 150px;
     @include boxShadow;
     input,
     textarea {
@@ -45,6 +68,7 @@ form {
         width: 50%;
         border: none;
         border-bottom: 2px solid $textColor;
+        font-size: 4.5rem;
     }
     input.formName {
         margin-right: 4%;
@@ -58,8 +82,58 @@ form {
     }
     input[type="submit"] {
         display: block;
-        background-color: $titleColor;
+        background-color: $third;
         width: 100%;
         border: none;
+    }
+}
+
+// responsive style 
+@media only screen and (max-width: 1090px) {
+    .contactHeader {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 995px) {
+    .contactHeader {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .contactWrapper {
+        background-image: url('../assets/contact-header-1.jpg');
+    }
+    .contactHeader {
+        height: 50vh;
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .contactBox {
+        background-color: transparent;
+        .wrapper {
+            height: auto;
+            position: static;
+            aside {
+                width: 100%;
+                text-align: center;
+                ul {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .contactBox form {
+        width: 100%;
+        margin: 0;
+        position: static;
+        box-shadow: none;
+        input.formEmail {
+            width: 46%;
+        }
     }
 }
