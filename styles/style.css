@@ -426,6 +426,11 @@ footer {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start; }
+    .about .aboutInfo:hover, .about .aboutInfo:focus, .about .aboutInfo:active {
+      border: 5px solid #2b2929;
+      -webkit-box-shadow: 10px 10px #2b2929;
+      box-shadow: 10px 10px #2b2929;
+      padding: 2%; }
   .about .aboutLogo {
     background-color: #bf2603;
     border-radius: 50%;
@@ -748,6 +753,8 @@ main.blog {
         font-family: "Chathura", sans-serif;
         display: block;
         line-height: 35px; }
+        main.blog aside .postContent .mainPost a:hover, main.blog aside .postContent .mainPost a:focus {
+          color: #bf2603; }
       main.blog aside .postContent h3 + p {
         margin: 0; }
     main.blog aside ul li {

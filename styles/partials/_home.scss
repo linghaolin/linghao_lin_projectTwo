@@ -64,6 +64,13 @@
         flex-basis: 50%;
         display: flex;
         align-items: flex-start;
+        &:hover,
+        &:focus,
+        &:active {
+            border: 5px solid lighten($primary, 10%);
+            box-shadow: 10px 10px lighten($primary, 10%);
+            padding: 2%;
+        }
     }
     .aboutLogo {
         background-color: $third;

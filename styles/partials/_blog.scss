@@ -57,6 +57,10 @@
                     font-family: $basefont;
                     display: block;
                     line-height: 35px;
+                    &:hover,
+                    &:focus {
+                        color: $third;
+                    }
                 }
                 h3+p {
                     margin: 0;
