@@ -17,13 +17,32 @@
             <div class="wrapper">
                 <nav class="headerNav">
                     <ul>
-                        <li><a href="">home</a></li>
-                        <li><a href="">about</a></li>
-                        <li class="navLogo"><a href="">Bar-One</a></li>
-                        <li><a href="">blog</a></li>
-                        <li><a href="">contact</a></li>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="index.html#about">about</a></li>
+                        <li class="navLogo"><a href="index.html">Bar-One</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
                     </ul>
                 </nav>
+
+                <div class="hamburgerMenu">
+                    <h1 class="blogHamburger"><a href="index.html">Bar-One</a></h1>
+                    <nav class="mainMenu">
+                        <input class="hamburgerOpen" id="toggleOpen" type="checkbox" name="toggle">
+                        <label for="toggleOpen">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <ul class="hamburgerList">
+                            <label for="toggleOpen" class="hamburgerClose">
+                                <i class="fas fa-times"></i>
+                            </label>
+                            <li><a href="index.html">home</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="blog.html">blog</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
 
                 <h1>Blog</h1>
             </div>

@@ -21,7 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 99;
+        z-index: 10;
     }
     h1 {
         color: $titleColor;
@@ -168,6 +168,9 @@
         .eventArticle {
             width: 70%;
             padding-left: 5%;
+            h3 {
+                color: $titleColor;
+            }
         }
     }
 }
