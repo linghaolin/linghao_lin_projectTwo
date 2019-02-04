@@ -27,7 +27,8 @@ header .wrapper {
         font-size: 6rem;
         font-family: $headerfont;
     }
-    li a:hover {
+    li a:hover,
+    li a:focus {
         color: $titleColor;
     }
 }

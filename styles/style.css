@@ -262,7 +262,8 @@ header .wrapper {
   .headerNav ul .navLogo a {
     font-size: 6rem;
     font-family: "Tulpen One", cursive; }
-  .headerNav ul li a:hover {
+  .headerNav ul li a:hover,
+  .headerNav ul li a:focus {
     color: #ff8327; }
 
 @media only screen and (max-width: 760px) {
@@ -414,10 +415,7 @@ footer {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-top: 10%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    padding-top: 10%; }
   .about .aboutInfo {
     position: relative;
     -ms-flex-preferred-size: 50%;
@@ -637,11 +635,7 @@ footer {
   .about {
     height: auto; }
     .about .wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      display: block;
       text-align: center;
       padding-top: 5%; }
     .about .aboutInfo {
@@ -657,13 +651,11 @@ footer {
       -ms-flex-align: center;
       align-items: center;
       margin-bottom: 2%;
-      width: 50%; }
-    .about .aboutLogo i {
-      font-size: 3rem; }
-    .about .aboutArticle h3 {
-      font-size: 5rem; }
-    .about .aboutArticle p {
-      display: none; }
+      width: 100%; }
+    .about .aboutArticle {
+      padding: 0; }
+      .about .aboutArticle p {
+        margin-top: 2%; }
   .event .wrapper {
     display: block;
     padding: 5%; }
@@ -700,6 +692,10 @@ footer {
       width: 100%; }
     .about .wrapper .aboutArticle {
       padding: 0; }
+      .about .wrapper .aboutArticle h3 {
+        font-size: 6rem; }
+      .about .wrapper .aboutArticle p {
+        font-size: 3rem; }
   .inquiry {
     height: auto; } }
 
