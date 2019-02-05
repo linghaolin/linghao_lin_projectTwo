@@ -336,9 +336,9 @@ header .wrapper {
     -ms-transform: translateX(0);
     transform: translateX(0); }
   #toggleOpen ~ .hamburgerList {
-    -webkit-transform: translateX(-1000px);
-    -ms-transform: translateX(-1000px);
-    transform: translateX(-1000px); } }
+    -webkit-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    transform: translateX(1000px); } }
 
 footer {
   background-color: #696969;
@@ -434,7 +434,7 @@ footer {
   .about .aboutLogo {
     background-color: #bf2603;
     border-radius: 50%;
-    padding: 3%; }
+    padding: 4%; }
     .about .aboutLogo i {
       font-size: 3rem; }
   .about .aboutArticle {
@@ -545,9 +545,7 @@ footer {
     .gallery .wrapper .galleryImage {
       margin-right: 2%;
       height: 400px;
-      width: 500px;
-      -o-object-fit: cover;
-      object-fit: cover; }
+      width: 500px; }
       .gallery .wrapper .galleryImage:last-child {
         margin-right: 0; }
       .gallery .wrapper .galleryImage img {
