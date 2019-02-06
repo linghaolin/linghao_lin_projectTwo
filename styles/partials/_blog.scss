@@ -6,7 +6,7 @@
     .blogHeader {
         background-image: url('../assets/blog-header-1.jpg');
         background-size: cover;
-        height: 80vh;
+        height: 100vh;
         h1 {
             color: $textColor;
             font-size: 12rem;
@@ -167,12 +167,15 @@
             background-image: url('../assets/blog-header-1.jpg');
         }
         .blogHeader {
-            height: 70vh;
+            height: auto;
             h1 {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding-left: 0;
+            }
+            .animateMainHeader {
+                width: 100%;
             }
         }
         main.blog {
@@ -242,11 +245,5 @@
             p {
                 font-size: 3.5rem;
             }
-        }
-    }
-    
-    @media only screen and (max-width: 500px) {
-        .blogHeader {
-            height: 50vh;
         }
     }

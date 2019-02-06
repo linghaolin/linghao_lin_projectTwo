@@ -13,31 +13,29 @@
     position: relative;
     height: 80vh;
     .mainTitle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 10;
     }
     h1 {
-        color: $titleColor;
-        font-family: $headerfont;
-        font-size: 26.14rem;
-        letter-spacing: 2.4px;
-        margin: 0;
-        text-align: center;
         position: relative;
-        span {
+        .titleBig {
+            color: $titleColor;
+            font-family: $headerfont;
+            font-size: 26.14rem;
+            letter-spacing: 2.4px;
+            margin: 0;
+            text-align: center;
+            display: inline-block;
+        }
+        .subtitle {
             font-size: 8.32rem;
             color: $textColor;
             font-family: $basefont;
             display: block;
             position: absolute;
-            top: 185%;
+            top: 76%;
             left: 2%;
         }
     }
@@ -47,6 +45,79 @@
     position: absolute;
     top: 40%;
     right: 0;
+}
+
+//big title animation
+@keyframes letterFall {
+    0% {
+        transform: translateY(-500px);
+    }
+    25% {
+        transform: translateY(-300px);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+    75% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes letterSlide {
+    0% {
+        left: -45%;
+    }
+    100% {
+        left: 2%;
+    }
+}
+
+.b,
+.a,
+.r,
+.space,
+.o,
+.n,
+.e {
+    transform: translateY(-1000px);
+    -webkit-animation: letterFall 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.b {
+    animation-delay: 0.5s;
+}
+
+.a {
+    animation-delay: 1s;
+}
+
+.r {
+    animation-delay: 1.5s;
+}
+
+.space {
+    animation-delay: 2s;
+}
+
+.o {
+    animation-delay: 2.5s;
+}
+
+.n {
+    animation-delay: 3s;
+}
+
+.e {
+    animation-delay: 3.5s;
+}
+
+.subtitle {
+    animation: letterSlide 4s ease-in;
+    animation-fill-mode: forwards;
 }
 
 // about section style
@@ -66,9 +137,7 @@
         &:hover,
         &:focus,
         &:active {
-            border: 5px solid lighten($primary, 10%);
-            box-shadow: 10px 10px lighten($primary, 10%);
-            padding: 2%;
+            background-color: rgba($third, 0.5)
         }
     }
     .aboutLogo {
@@ -190,11 +259,9 @@
             margin-right: 2%;
             height: 400px;
             width: 500px;
+            background-size: cover;
             &:last-child {
                 margin-right: 0;
-            }
-            img {
-                object-fit: cover;
             }
         }
     }
@@ -226,6 +293,9 @@
             bottom: -4%;
         }
     }
+    .event .wrapper .eventImage {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 997px) {
@@ -245,6 +315,9 @@
     .news .newsBox2 .newsImage {
         bottom: -2%;
     }
+    .event .wrapper .eventImage {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 897px) {
@@ -262,6 +335,10 @@
     }
     .news .newsBox2 .newsArticle {
         margin-right: 5%;
+    }
+    .event .wrapper .eventImage {
+        height: 50%;
+        width: 50%;
     }
 }
 
@@ -319,6 +396,11 @@
 }
 
 @media only screen and (max-width: 680px) {
+    .homeHeader main {
+        .titleBig {
+            font-size: 10.14rem;
+        }
+    }
     .about {
         height: auto;
         .wrapper {
@@ -366,10 +448,8 @@
     .homeHeader main {
         position: static;
         h1 {
-            font-size: 15rem;
-            span {
-                font-size: 6.32rem;
-                top: 115%;
+            .titleBig {
+                font-size: 18rem;
             }
         }
     }
@@ -393,5 +473,17 @@
     }
     .inquiry {
         height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .homeHeader main h1 {
+        .titleBig {
+            font-size: 12rem;
+        }
+        span.subtitle {
+            font-size: 7.32rem;
+            top: 58%;
+        }
     }
 }

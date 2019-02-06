@@ -11,6 +11,21 @@
     }
 }
 
+h1.animateMainHeader {
+    animation: letterRotate 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    width: 30%;
+}
+
+@keyframes letterRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 // main style
 .contactBox {
     background-color: $primary;
@@ -100,12 +115,15 @@
         background-image: url('../assets/contact-header-1.jpg');
     }
     .contactHeader {
-        height: 50vh;
+        height: auto;
         h1 {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+    }
+    h1.animateMainHeader {
+        width: 60%;
     }
     .contactBox {
         background-color: transparent;
