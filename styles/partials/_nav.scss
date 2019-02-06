@@ -10,7 +10,7 @@ header .wrapper {
     font-family: $basefont;
     width: 70%;
     margin: 0 auto;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .headerNav ul {

@@ -243,7 +243,7 @@ header .wrapper {
   font-family: "Chathura", sans-serif;
   width: 70%;
   margin: 0 auto;
-  text-transform: uppercase; }
+  text-transform: capitalize; }
 
 .headerNav ul {
   display: -webkit-box;
